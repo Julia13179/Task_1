@@ -15,16 +15,6 @@ from tests.test_constants import (
 class TestBurger:
     # Тесты для класса Burger.
 
-    @pytest.fixture
-    def ingredient(self):
-        # Фикстура для создания ингредиента.
-        return Ingredient(INGREDIENT_TYPE_SAUCE, INGREDIENT_HOT_SAUCE, PRICE_100)
-
-    @pytest.fixture
-    def bun(self):
-        # Фикстура для создания булочки.
-        return Bun(BUN_BLACK, PRICE_100)
-
     def test_set_buns(self, bun):
         # Проверка установки булочек.
         burger = Burger()
